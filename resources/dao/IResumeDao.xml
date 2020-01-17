@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.IResumeDao">
+
+
+   <insert id="addResumeToPosition" parameterType="entitys.RePo" >
+       insert into resume_position values(null,#{r_re_id},#{r_po_id},#{r_sr_id})
+   </insert>
+
+    <select id="checkSystemResumeIsUpLoad"   parameterType="entitys.RePo" resultType="entitys.RePo">
+        select * from resume_position where r_re_id=#{r_re_id} and r_po_id=#{r_po_id}
+    </select>
+
+
+    <select id="checkServiceResumeIsUpLoad" parameterType="entitys.RePo" resultType="entitys.RePo">
+        select * from resume_position where r_sr_id=#{r_sr_id} and r_po_id=#{r_po_id}
+    </select>
+
+
+
+</mapper>

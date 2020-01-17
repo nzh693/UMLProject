@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.IJobSeekerDao">
+
+
+    <select id="queryJobSeekerByName"  resultType="entitys.JobSeeker">
+     select  * from jobseeker where js_name=#{name}
+    </select>
+
+
+    <select id="queryResumeBySeekId"  resultType="int">
+     select  js_re_id from jobseeker where js_id=#{id}
+    </select>
+
+
+    <select id="queryServiceResumeBySeekId"  resultType="int">
+     select  js_sre_id from jobseeker where js_id=#{id}
+    </select>
+
+
+
+</mapper>

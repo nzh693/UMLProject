@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.ICompanyDao">
+
+
+    <resultMap id="companyMap" type="entitys.Company">
+
+        <!--首先配置主键-->
+        <id property="co_id" column="co_id"></id>
+        <!--再配置其他属性-->
+        <result property="co_name" column="co_name"></result>
+        <result property="co_password" column="co_password"></result>
+        <result property="co_iamge" column="co_iamge"></result>
+        <result property="co_desc" column="co_desc"></result>
+        <result property="co_address" column="co_address"></result>
+        <result property="co_environment" column="co_environment"></result>
+        <result property="co_opnum" column="co_opnum"></result>
+        <result property="co_creditPoint" column="co_creditPoint"></result>
+        <result property="co_c_id" column="co_c_id"></result>
+        <collection property="tradeFields" ofType="entitys.TradeField">
+            <id property="tf_id" column="tf_id"></id>
+            <result property="tf_name" column="tf_name"></result>
+            <result property="tf_desc" column="tf_desc"></result>
+        </collection>
+    </resultMap>
+
+    <select id="queryCompanyByName"  resultType="entitys.Company">
+     select  * from company where co_name=#{name}
+    </select>
+
+    <select id="queryCompanyById"  resultMap="companyMap">
+     select * from
+     (select c.*,tf.* from company c
+     left outer join field_company fc on c.co_id=fc.fc_co_id
+     left outer join tradefield tf on tf.tf_id=fc.fc_tf_id)  t
+     where co_id=#{id}
+    </select>
+
+</mapper>

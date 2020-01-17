@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation=
+               "http://www.springframework.org/schema/beans
+                http://www.springframework.org/schema/beans/spring-beans.xsd
+                http://www.springframework.org/schema/mvc
+                http://www.springframework.org/schema/mvc/spring-mvc.xsd
+                http://www.springframework.org/schema/context
+                http://www.springframework.org/schema/context/spring-context.xsd">
+    <!--扫描包-->
+    <context:component-scan base-package="controls"></context:component-scan>
+
+    <!--视图解析器-->
+    <bean id="internalResourceViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
+        <property name="prefix" value="/pages/"></property>
+        <property name="suffix" value=".jsp"></property>
+    </bean>
+
+    <!--开启SpringMvc注解(加载适配器，处理映射器)-->
+    <!--<mvc:annotation-driven conversion-service="conversionService"></mvc:annotation-driven>-->
+
+
+
+    <!--开启注解-->
+    <mvc:annotation-driven ></mvc:annotation-driven>
+
+    <!-- 静态资源映射 location是本地静态资源路径 mapping是映射的url地址，访问时就使用该地址 -->
+    <mvc:resources location="/pages" mapping="/**" />
+
+    <context:annotation-config />
+
+    <mvc:interceptors>
+        <!--第一个拦截器-->
+        <mvc:interceptor>
+            <!--配置拦截方法-->
+            <mvc:mapping path="/user/testKeyword"/>
+            <!--配置拦截器类-->
+            <bean id="myFirstInterceptor" class="basalInstance.interceptor.MyFirstInterceptor"></bean>
+        </mvc:interceptor>
+
+    </mvc:interceptors>
+
+</beans>

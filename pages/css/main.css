@@ -1,0 +1,316 @@
+*{margin:0;padding:0;}
+
+body{
+	background-color: #f0f0f0;
+}
+
+.main{
+	width:60% ;
+	height: 1600px;
+	margin: 0px auto;
+	background: #f0f0f0;
+}
+
+.system_ad1{
+	width: 100%;
+	height: 80px;
+	background-image: url(https://image0.lietou-static.com/img/5dce84add38a3d7423d2ed7f08u.jpg);
+}
+
+.content{
+	width: 100%;
+	height: 100%;
+	background-color: #f0f0f0;
+}
+
+.contentLeft{
+	width: 65%;
+	height: 100%;
+	float: left;
+	background-color: #f0f0f0;
+}
+.contentRight{
+	width: 33%;
+	height: 100%;
+	float: right;
+	background-color: #f0f0f0;
+}
+
+.search{
+	width: 100%;
+	height: 100px;
+	margin: 0px auto;
+	padding-top: 20px;
+	background-color: #ffffff;
+}
+
+.selection{
+	width: 100%;
+	height: 40px;
+	clear: both;
+	background-color:#ffffff;
+	margin-top: 20px;
+}
+.showPosition{
+	width: 100%;
+	height: 130px;
+	margin-top: 20px;
+	background-color: #ffffff;
+}
+
+.basicInfo{	
+	width: 100%;
+	height: 300px;
+	background-color: darkorange;
+}
+
+.system_ad2{
+	width: 100%;
+	height: 100px;
+	margin-top: 20px;
+	background-color: crimson;
+}
+
+.powerlimit{
+	width: 100%;
+	height: 200px;
+	margin-top: 20px;
+	background-color: #9932CC;
+}
+
+.systemStatistic{
+	width: 100%;
+	height: 250px;
+	margin-top: 20px;
+	background-color: darkslategrey;
+}
+
+
+.systemService{
+	width: 100%;
+	height: 300px;
+	margin-top: 20px;
+	background-color: cornflowerblue;
+}
+
+
+.searchMian{
+	width: 85%;
+	height: 80px;
+    margin: 0px auto;	
+}
+
+.input{
+	width: 85%;
+	height: 50px;
+	float: left;
+
+}
+
+.startSearch{
+	width: 12%;
+	height: 51px;
+	float: right;
+}
+
+.hotSearch{
+	width: 100%;
+	height: 50px;
+	display: inline-block;
+
+}
+
+.hotSearch ul{
+	vertical-align: middle;
+    list-style-type: none;
+    overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+
+.hotSearch ul li{
+	 display: inline;
+	 font-size: 14px;
+	 margin-right: 12px;
+	 
+}
+
+.searchInput{
+	width: 100%;
+	height: 95%;
+	padding-left: 3%;
+	border: 1px solid deepskyblue;
+	border-radius: 5px;
+}
+
+
+.menu_content{
+	width: 100%;
+	height: 100%;
+	margin-left: 10px;
+	display: inline;
+	font-size: 22px;
+	color: #00528c;
+
+}
+
+.menu_content  a{
+	text-decoration: none;
+	color:#00528c ;
+	margin-right: 30px;
+	margin-top: 5px;
+	vertical-align: middle;
+	border-bottom: cadetblue solid 2px;
+}
+
+
+
+
+.positionInfo{	
+	width: 48%;
+	height: 100%;
+	float: left;
+	margin-left: 2%;
+	
+}
+
+
+.companyInfo{
+	width: 45%;
+	height: 100%;
+	float: right;
+
+
+}
+
+.companyInfoChild{
+	width: 90%;
+	height: 80%;
+	padding-left: 4%;
+	margin-top: 10px;
+	border-left: solid 1px gray;
+	border-left-style: dotted ;
+	
+}
+
+.positonName{
+	width: 80%;
+	height: 25%;
+    font-size: 21px;
+    margin-top: 3%;
+    color: #127FB6;
+    overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+   
+
+}
+.positonDetail{
+	width: 80%;
+	height: 25%;
+	margin-top: 10px;
+	text-align: left;
+	
+
+}
+
+.positonTime{
+	width: 80%;
+	height: 25%;
+	margin-top: 3%;
+
+}
+
+.positonDetail_ul ul{
+	width: 100%;
+	height: 100%;
+	margin-top: 0px;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+
+.positonDetail ul li{
+	display: inline;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+
+.positonDetail_ul{
+	width: 95%;
+	height: 100%;
+}
+
+.companyName{
+	width: 100%;
+	height: 25%;
+	font-size: 19px;
+}
+.companyField{
+	width: 100%;
+	height: 25%;
+	margin-top: 2%;
+	font-size: 15px;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+
+}
+.companyLable{
+	width: 100%;
+	height: 25%;
+	margin-top: 3%;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+
+	
+}
+
+.companyField ul{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+
+.companyField ul li{
+	display: inline;
+	vertical-align: middle;
+	margin-right: 5px;
+	font-size: 15px;
+}
+
+.companyLable ul{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+
+.companyLable ul li{
+	
+    display: inline;
+	vertical-align: middle;
+	margin-right: 8px;
+	font-size: 14px;
+	padding: 4px;
+	background-color: #87CEEB;
+	border: 1px solid #87CEEB ;
+}
+
+.menu_content a:hover,a:active{
+	 background: none;
+ }
+
+.showPosition a:link{
+	color: #303a40;
+}
+.showPosition a:visited{
+	color: #303a40;
+}
+.showPosition a:active,a:hover{
+	text-decoration: none;
+}

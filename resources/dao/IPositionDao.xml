@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.IPositionDao">
+
+    <!--配置实体类与数据库表属性名称和列名的映射-->
+    <resultMap id="positionMap" type="entitys.Position">
+        <!--首先配置主键-->
+        <id property="id" column="po_id"></id>
+        <!--再配置其他属性-->
+        <result property="name" column="po_name"></result>
+        <result property="state" column="po_state"></result>
+        <result property="desc" column="po_desc"></result>
+        <result property="status" column="po_status"></result>
+        <result property="salary" column="po_salary"></result>
+        <result property="limits" column="po_limit"></result>
+        <result property="wareFare" column="po_warefare"></result>
+        <result property="workPlace" column="po_workpalce"></result>
+        <result property="upTime" column="po_uploadTime"></result>
+        <result property="companyId" column="po_co_id"></result>
+        <result property="fieldId" column="po_tf_id"></result>
+
+        <association property="company" javaType="entitys.Company"
+                     select="dao.ICompanyDao.queryCompanyById" column="po_co_id">
+        </association>
+
+
+    </resultMap>
+
+
+
+   <select id="queryPositionById" resultMap="positionMap">
+       select  * from positionn where po_id=#{id}
+   </select>
+
+
+    <select id="queryAllPosition" resultMap="positionMap">
+     select * from positionn
+    </select>
+
+
+</mapper>
